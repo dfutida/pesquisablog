@@ -17,26 +17,32 @@
                 </p>
             </div>
         </div>
+    <table border="1" cellspacing="5px" cellpadding="5px">
+    <tr>
+    <td>ID</td>
+    <td>Título</td>
+    <td>URL</td>
+    <td>Ação</td>
+    </tr>
 <?php
     $sql = DB::table('artigos')
     ->select('id', 'titulo', 'link')
     ->orderBy('titulo', 'ASC')
     ->get();
-?>
-    <table border="1" cellspacing="5px" cellpadding="5px">
-<?php
+
     foreach ($sql as $lista) {
         $id = $lista->id;
         $titulo = $lista->titulo;
         $link = $lista->link;
-
-        echo "<tr>";
+            
+            echo "<tr>";
             print_r("<td>".$id."</td>");
             print_r("<td>".$titulo."</td>");
             print_r("<td><a href='".$link."' target='_blank'>".$link."</a></td>");
             echo "<td><a href='/delete/$id' class='btn btn-sm btn-secondary'>DELETE</a></td>";
-        echo "</tr>";
-    }    
+            echo "</tr>";
+    }
+        
 ?>
     </table>
 

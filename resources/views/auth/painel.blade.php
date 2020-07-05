@@ -36,7 +36,7 @@
     if(!empty($_GET['s'])) {
         $link = "https://uplexis.com.br/category/blog/?s=" . str_replace(' ', '%20', $_GET['s']);
     } else {
-        $link = "https://uplexis.com.br/category/blog/";
+        $link = "https://uplexis.com.br/category/blog/httpblog-uplexis-com-brinstitucional/?s=upminer";
     }
 
     $dom = HtmlDomParser::file_get_html( $link );
@@ -61,7 +61,7 @@
     foreach ($dom->find('div[class=wrap-button]') as $element) {
         $links = $element->find('a');
         foreach ($links as $mylink) {
-            $res[] = $mylink->href.'<br>';
+            $res[] = $mylink->href;
         }
     }
 
@@ -69,14 +69,19 @@
 
     $array_final = array_combine($title, $mymerge);
     //print_r($array_final);
-
-    echo "<form action='/painel' method='GET'>";
-
+?>
+    <br><br>
+    <form action="/painel" method="GET">
+    <table border="1" cellspacing="5px" cellpadding="5px">
+<?php
     for ($i = 0; $i <  count($array_final); $i++) {
         $titulo=key($array_final);
         $url=$array_final[$titulo];
         if ($url<> ' ') {
-           echo $titulo."<br><a href=".$url.">".$url."</a><br>";
+           echo "<tr>";
+           echo "<td>$titulo</td>";
+           echo "<td><a href='".$url."' target='_blank'>".$url."</a></td>";
+           echo "</tr>";
 
            DB::table('artigos')->insert([
            'id_usuario' => $id,
@@ -91,6 +96,7 @@
     }
     echo "</form>";
 ?>
+    </table>
             </div>
         </div>
     </div>
