@@ -8,9 +8,13 @@ Passos para rodar o sistema de busca no blog da Uplexis.
 Instale o WAMPP(Apache, MySQL, MariaDB and PHP)
 https://sourceforge.net/projects/wampserver/
 
-Inicie o WampServer.
+Inicie todos os serviços do WampServer.
 
-Crie um novo banco de dados chamado de projeto em:
+Salve/mova a pasta do projeto baixado do github em: 
+
+"C:\wamp64\www\pesquisablog"
+
+Crie um novo banco de dados chamado de "projeto" em:
 http://localhost/phpmyadmin/
 
 *verificar se existe alguma porta e adicionar em:
