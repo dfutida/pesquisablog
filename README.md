@@ -53,12 +53,13 @@ depois:
 Vai acessar no navegador: 
 http://localhost:8000/
 
-//Rodar as migrations no CMD para criar o banco de dados dentro do diretório: "C:\wamp64\www\pesquisablog>",
+//Rodar as migrations no CMD para criar as tabelas dentro do diretório: 
+"C:\wamp64\www\pesquisablog>",
 
-//Para criar as tabelas do banco de dados
+//Para criar as tabelas do banco de dados: 
 "php artisan migrate"
 
-//Para inserir um registro na tabela usuarios
+//Para inserir um registro na tabela usuarios: 
 "php artisan db:seed"
 
 Se tudo deu certo, pronto, o banco de dados foi criado e populado com um registro de usuario.
