@@ -31,7 +31,7 @@ Agora faça 4 coisas importantes:
 
 4- Configure com os dados do seu banco no arquivo ".env" na raiz do projeto pesquisablog:
 
-Caso o arquivo esteja com nome ".env-example" renomear para ".env"
+Caso o arquivo esteja com nome ".env.example" renomear para ".env"
 
 DB_CONNECTION=mysql
 
@@ -48,19 +48,19 @@ DB_PASSWORD=
 
 depois:
 
+//Rodar as migrations no CMD para criar as tabelas dentro do diretório: 
+"C:\wamp64\www\pesquisablog>",
+
+//Para criar as tabelas do banco de dados rodar a migration no CMD: 
+"php artisan migrate"
+
+//Para inserir um registro na tabela usuarios: 
+"php artisan db:seed --class=UsersTableSeeder"
+
 //Rode o server com o comando "php artisan serve" no CMD dentro do diretório: "C:\wamp64\www\pesquisablog>",
 
 Vai acessar no navegador: 
 http://localhost:8000/
-
-//Rodar as migrations no CMD para criar as tabelas dentro do diretório: 
-"C:\wamp64\www\pesquisablog>",
-
-//Para criar as tabelas do banco de dados: 
-"php artisan migrate"
-
-//Para inserir um registro na tabela usuarios: 
-"php artisan db:seed"
 
 Se tudo deu certo, pronto, o banco de dados foi criado e populado com um registro de usuario.
 
