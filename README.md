@@ -4,6 +4,13 @@ https://sourceforge.net/projects/wampserver/
 
 Inicie o WampServer.
 
+Crie um novo banco de dados chamado de projeto em:
+http://localhost:8181/phpmyadmin/
+
+"usuario: root" sem senha no MySQL
+
+Somente crie o banco de dados, deixe sem tabelas porque iremos criá-las na migrations.
+
 Instale o composer
 https://getcomposer.org/Composer-Setup.exe
 
@@ -32,6 +39,7 @@ DB_PASSWORD=
 
 
 depois:
+
 //Rode o server com o comando "php artisan serve" no CMD dentro do diretório: "C:\wamp64\www\pesquisablog>",
 
 Vai acessar no navegador: 
@@ -39,8 +47,10 @@ http://localhost:8000/
 
 //Rodar as migrations para criar o banco de dados dentro do diretório: "C:\wamp64\www\pesquisablog>",
 
+//Para criar as tabelas do banco de dados
 "php artisan migrate"
 
+//Para inserir um registro na tabela usuarios
 "php artisan db:seed"
 
 Se tudo deu certo, pronto, o banco de dados foi criado e populado com um registro de usuario.
