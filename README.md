@@ -45,7 +45,7 @@ depois:
 Vai acessar no navegador: 
 http://localhost:8000/
 
-//Rodar as migrations para criar o banco de dados dentro do diretório: "C:\wamp64\www\pesquisablog>",
+//Rodar as migrations no CMD para criar o banco de dados dentro do diretório: "C:\wamp64\www\pesquisablog>",
 
 //Para criar as tabelas do banco de dados
 "php artisan migrate"
