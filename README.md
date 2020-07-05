@@ -63,3 +63,6 @@ http://localhost:8000/
 "php artisan db:seed"
 
 Se tudo deu certo, pronto, o banco de dados foi criado e populado com um registro de usuario.
+
+Login: admin
+Senha: admin
