@@ -1,3 +1,7 @@
+Baixe o ZIP no github: https://github.com/dfutida/pesquisablog
+
+Code -> Download ZIP
+
 Passos para rodar o sistema de busca no blog da Uplexis.
 Instale o WAMPP(Apache, MySQL, MariaDB and PHP)
 https://sourceforge.net/projects/wampserver/
@@ -5,7 +9,10 @@ https://sourceforge.net/projects/wampserver/
 Inicie o WampServer.
 
 Crie um novo banco de dados chamado de projeto em:
-http://localhost:8181/phpmyadmin/
+http://localhost/phpmyadmin/
+
+*verificar se existe alguma porta e adicionar em:
+http://localhost:8080/phpmyadmin/ 
 
 "usuario: root" sem senha no MySQL
 
@@ -24,6 +31,7 @@ Agora faça 4 coisas importantes:
 
 4- Configure com os dados do seu banco no arquivo ".env" na raiz do projeto pesquisablog:
 
+Caso o arquivo esteja com nome ".env-example" renomear para ".env"
 
 DB_CONNECTION=mysql
 
